@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+func swap(a, b *int) {
+    _a, _b = _b, _a
+}
+
+func reverse(arr []int) {
+    for i, j := 0, len(arr)-1; i < j; i, j = i+1, j-1 {
+        arr[i], arr[j] = arr[j], arr[i]
+    }
+}
+
+func main() {
+    var a, b int
+    fmt.Scan(&a, &b)
+    swap(&a, &b)
+    fmt.Println(a, b)
+
+    // Пример для reverse:
+    arr := []int{1, 2, 3, 4, 5}
+    reverse(arr)
+    fmt.Println(arr) // 5 4 3 2 1
+}
