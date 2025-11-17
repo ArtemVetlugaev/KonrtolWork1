@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func main() {
+    x := 5
+    x = x + 3
+    fmt.Println(x) // 8
+    x += 2
+    fmt.Println(x) // 10
+    x *= 4
+    fmt.Println(x) // 40
+    x -= 10
+    fmt.Println(x) // 30
+}
