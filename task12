@@ -1,0 +1,24 @@
+package main
+
+import "fmt"
+
+type Celsius float64
+
+func (c Celsius) ToFahrenheit() float64 {
+    return float64(c)*9/5 + 32
+}
+
+func (c *Celsius) Add(d Celsius) {
+    *c += d
+}
+
+func main() {
+    var temp float64
+    fmt.Scan(&temp)
+    c := Celsius(temp)
+
+    fmt.Printf("%.2f\n", c.ToFahrenheit())
+
+    c.Add(10)
+    fmt.Printf("%.2f\n", c)
+}
